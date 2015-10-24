@@ -1,9 +1,10 @@
 import React from 'react';
+import Movie from './Movie.jsx';
 
 export default React.createClass({
   render: function() {
-    return <div>
-      <a className="btn btn-info" href="#">Hi World!</a>
+    return <div className="display">
+      <Movie />
     </div>
-  }
+  ;}
 });
