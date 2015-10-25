@@ -1,6 +1,9 @@
 import React from 'react';
 import MovieSocialStats from './MovieSocialStats.jsx';
 import MovieDetails from './MovieDetails.jsx';
+import CollectionManager from './CollectionManager.jsx';
+import Comment from './Comment.jsx';
+import CommentWriter from './CommentWriter.jsx';
 
 export default React.createClass({
   getDefaultProps: function() {
@@ -33,7 +36,12 @@ export default React.createClass({
         </div>
         <MovieDetails releaseDate={this.props.releaseDate} runTime={this.props.runTime} certification={this.props.certification} genres={this.props.genres} />
         <p className='movie-description'>{this.props.sinopsis}</p>
+        <CollectionManager />
+        <CommentWriter />
+        <Comment author="Sergio Panadero" date="10/10/2015" text="An awesome movie for all the family. We all enjoyed it a lot" />
+        <Comment author="Gotrecillo" date="11/11/2015" text="I didnt like it as much as the despicable me movies" />
       </div>
     );
   }
 });
+
